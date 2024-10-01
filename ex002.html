@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Verificação de país</title>
+    <style>
+         h1{
+            font: normal 20px Arial;
+        }
+         h2{
+             font: normal 15px Arial;
+         }
+    </style>
+</head>
+<body>
+<h1>Sistema de país</h1>
+        <h2>Verificando se voce é brasileiro:</h2> <input type="text"  name="txtp1" id="txtp1"
+        placeholder="Digite o nome do pais: ">
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="res"></div>
+
+<script>
+    function verificar(){
+        const txtp1 = document.querySelector("input#txtp1");
+        const res = document.querySelector("div#res");
+        const pais = (txtp1.value.toLowerCase());
+        res.innerHTML = "Seu país é: <strong>"+ pais + "</strong>";
+        if (pais === "brasil"){
+            res.innerHTML = "Voce é brasileiro";
+        }else{
+            res.innerHTML = "Voce não é brasileiro";
+        }
+    }
+</script>
+</body>
+</html>
